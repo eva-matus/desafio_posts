@@ -115,3 +115,45 @@ UPDATE 1
   3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
 (3 rows)
 
+6. Insertar 2 post para el usuario "Pedro" (0.4 puntos)
+
+INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+eva-# VALUES('Pedro', '2019-05-14', 'datos posts', 'Contenido cliente'
+eva(# );
+INSERT 0 1
+
+eva=# UPDATE posts SET titulo = 'Cliente satisfecho' WHERE ID = 4;
+UPDATE 1
+
+eva=# UPDATE posts SET titulo = 'Cliente feliz' WHERE ID = 4;
+UPDATE 1
+
+eva=# SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    |      titulo      
+----+---------+-------------------+---------------------+-------------------+------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | Cliente contento
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | Cliente molesto
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
+  4 | Pedro   | 2019-05-14        | datos posts         | Contenido cliente | Cliente feliz
+(4 rows)
+(END)
+
+7. Eliminar el post de Carlos (1 punto)
+
+eva=# DELETE FROM posts WHERE id = 5;
+DELETE 0
+
+eva=# SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    |      titulo      
+----+---------+-------------------+---------------------+-------------------+------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | Cliente contento
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | Cliente molesto
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
+  4 | Pedro   | 2019-05-14        | datos posts         | Contenido cliente | Cliente feliz
+(4 rows)
+
+(END)
+
+

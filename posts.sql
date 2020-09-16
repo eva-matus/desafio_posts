@@ -203,5 +203,10 @@ eva(# FOREIGN KEY(id) REFERENCES posts(id),
 eva(# PRIMARY KEY(id));
 CREATE TABLE
 eva=# 
+eva=# SELECT * FROM comentarios;
+ id | fecha_creacion | contenido | id_posts 
+----+----------------+-----------+----------
+(0 rows)
+
 
 

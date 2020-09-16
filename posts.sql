@@ -27,7 +27,7 @@ CREATE TABLE
 
 3. Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos" (0.6 puntos)
 
-INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+eva=# INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
 VALUES('Pamela', '2020-12-31', 'Base de datos posts', 'Contenido tabla'
 );
 INSERT 0 1
@@ -44,12 +44,12 @@ eva=# SELECT * FROM posts;
 
 SEGUNDO POSTS PARA 'PAMELA':
 
-INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
-eva-# VALUES('Pamela', '2020-12-31', 'datos posts', 'Contenido client'
+eva=# INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+VALUES('Pamela', '2020-12-31', 'datos posts', 'Contenido client'
 eva(# );
 INSERT 0 1
 
-SELECT * FROM posts;
+eva=# SELECT * FROM posts;
 
  id | usuario | fecha_de_creacion |      contenido      |    descripcion    
 ----+---------+-------------------+---------------------+-------------------
@@ -60,12 +60,12 @@ SELECT * FROM posts;
 
 POSTS PARA CARLOS:
 
-INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+eva=# INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
 eva-# VALUES('Carlos', '2020-09-24', 'datos posts', 'Contenido cliente'
 eva(# );
 INSERT 0 1
 
-SELECT * FROM posts;
+eva=# SELECT * FROM posts;
 
  id | usuario | fecha_de_creacion |      contenido      |    descripcion    
 ----+---------+-------------------+---------------------+-------------------
@@ -78,10 +78,10 @@ SELECT * FROM posts;
 
 4. Modificar la tabla post, agregando la columna título (1 punto)
 
-ALTER TABLE posts ADD titulo VARCHAR;
+eva=# ALTER TABLE posts ADD titulo VARCHAR;
 ALTER TABLE
 
-SELECT * FROM posts;
+eva=# SELECT * FROM posts;
 
  id | usuario | fecha_de_creacion |      contenido      |    descripcion    | titulo 
 ----+---------+-------------------+---------------------+-------------------+--------
@@ -95,11 +95,23 @@ SELECT * FROM posts;
 
 ALTER TABLE SOLO PARA EL PRIMER USUARIO:
 
-UPDATE posts SET titulo = 'Cliente contento' WHERE ID = 1;
+eva=# UPDATE posts SET titulo = 'Cliente contento' WHERE ID = 1;
 UPDATE 1
 
 ALTER TABLE SOLO PARA EL SEGUNDO USUARIO:
 
-UPDATE posts SET titulo = 'Cliente molesto' WHERE ID = 2;
+eva=# UPDATE posts SET titulo = 'Cliente molesto' WHERE ID = 2;
 UPDATE 1
+
+ALTER TABLE SOLO PARA EL TERCER USUARIO:
+
+eva=# UPDATE posts SET titulo = 'Cliente chevere' WHERE ID = 3;
+UPDATE 1
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    |      titulo      
+----+---------+-------------------+---------------------+-------------------+------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | Cliente contento
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | Cliente molesto
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
+(3 rows)
 

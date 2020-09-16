@@ -156,4 +156,52 @@ eva=# SELECT * FROM posts;
 
 (END)
 
+8. Ingresar un nuevo post para el usuario "Carlos" (0.6 puntos)
+
+eva=# INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion) VALUES('Carlos', '2020-10-28', 'datos posts', 'Contenido cliente');
+INSERT 0 1
+
+eva=# SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    |      titulo      
+----+---------+-------------------+---------------------+-------------------+------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | Cliente contento
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | Cliente molesto
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
+  4 | Pedro   | 2019-05-14        | datos posts         | Contenido cliente | Cliente feliz
+  5 | Carlos  | 2020-10-28        | datos posts         | Contenido cliente | 
+(5 rows)
+(END)
+
+eva=# UPDATE posts SET titulo = 'Cliente feliz' WHERE ID = 6;
+UPDATE 0
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    |      titulo      
+----+---------+-------------------+---------------------+-------------------+------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | Cliente contento
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | Cliente molesto
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | Cliente chevere
+  4 | Pedro   | 2019-05-14        | datos posts         | Contenido cliente | Cliente feliz
+  5 | Carlos  | 2020-10-28        | datos posts         | Contenido cliente | 
+(5 rows)
+
+
+
+Parte 2
+
+
+
+9. Crear una nueva tabla, llamada comentarios, con los atributos id, fecha y hora de creación,
+contenido, que se relacione con la tabla posts. (1 punto)
+
+eva=# CREATE TABLE  comentarios(
+eva(# id SERIAL,
+eva(# fecha_creacion TIMESTAMP,
+eva(# contenido VARCHAR(255),
+eva(# id_posts INT,
+eva(# FOREIGN KEY(id) REFERENCES posts(id),
+eva(# PRIMARY KEY(id));
+CREATE TABLE
+eva=# 
+
 

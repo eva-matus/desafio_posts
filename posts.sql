@@ -25,4 +25,81 @@ eva(# descripcion VARCHAR,
 eva(# PRIMARY KEY (id));
 CREATE TABLE
 
+3. Insertar 3 post, 2 para el usuario "Pamela" y uno para "Carlos" (0.6 puntos)
+
+INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+VALUES('Pamela', '2020-12-31', 'Base de datos posts', 'Contenido tabla'
+);
+INSERT 0 1
+
+EJECUTAR PARA LAVISUALIZACION DEL CONTENIDO:
+
+eva=# SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |   descripcion   
+----+---------+-------------------+---------------------+-----------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla
+(1 row)
+(END)
+
+SEGUNDO POSTS PARA 'PAMELA':
+
+INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+eva-# VALUES('Pamela', '2020-12-31', 'datos posts', 'Contenido client'
+eva(# );
+INSERT 0 1
+
+SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    
+----+---------+-------------------+---------------------+-------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente
+(2 rows)
+(END)
+
+POSTS PARA CARLOS:
+
+INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion)
+eva-# VALUES('Carlos', '2020-09-24', 'datos posts', 'Contenido cliente'
+eva(# );
+INSERT 0 1
+
+SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    
+----+---------+-------------------+---------------------+-------------------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente
+(3 rows)
+
+(END)
+
+4. Modificar la tabla post, agregando la columna título (1 punto)
+
+ALTER TABLE posts ADD titulo VARCHAR;
+ALTER TABLE
+
+SELECT * FROM posts;
+
+ id | usuario | fecha_de_creacion |      contenido      |    descripcion    | titulo 
+----+---------+-------------------+---------------------+-------------------+--------
+  1 | Pamela  | 2020-12-31        | Base de datos posts | Contenido tabla   | 
+  2 | Pamela  | 2020-12-31        | datos posts         | Contenido cliente | 
+  3 | Carlos  | 2020-09-24        | datos posts         | Contenido cliente | 
+(3 rows)
+(END)
+
+5. Agregar título a las publicaciones ya ingresadas ( (1 punto)
+
+ALTER TABLE SOLO PARA EL PRIMER USUARIO:
+
+UPDATE posts SET titulo = 'Cliente contento' WHERE ID = 1;
+UPDATE 1
+
+ALTER TABLE SOLO PARA EL SEGUNDO USUARIO:
+
+UPDATE posts SET titulo = 'Cliente molesto' WHERE ID = 2;
+UPDATE 1
 

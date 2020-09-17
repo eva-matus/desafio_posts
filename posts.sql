@@ -206,3 +206,34 @@ INSERT 0 1
 (5 rows)
 
 
+12. Ingresar 5 comentarios para el post de Margarita. (1 punto)
+
+eva=# INSERT INTO comentarios(id, fecha_y_hora, contenido) VALUES('7', '2020-08-02 16:22:00', 'Compras varias');
+INSERT 0 1
+eva=# INSERT INTO comentarios(id, fecha_y_hora, contenido) VALUES('7', '2020-08-02 22:56:09', 'Compras varias');
+INSERT 0 1
+eva=# INSERT INTO comentarios(id, fecha_y_hora, contenido) VALUES('7', '2020-08-02 21:30:00', 'Compras varias');
+INSERT 0 1
+eva=# INSERT INTO comentarios(id, fecha_y_hora, contenido) VALUES('7', '2020-08-02 17:25:50', 'Compras varias');
+INSERT 0 1
+eva=# INSERT INTO comentarios(id, fecha_y_hora, contenido) VALUES('7', '2020-08-02 12:37:00', 'Compras varias');
+INSERT 0 1
+
+eva=# SELECT * FROM comentarios;
+
+ id |    fecha_y_hora     |    contenido    
+----+---------------------+-----------------
+  1 | 2020-12-09 20:09:08 | Clienta
+  2 | 2020-12-09 19:14:46 | Clienta
+  3 | 2020-11-17 19:14:46 | Cliente
+  6 | 2020-09-25 15:20:00 | Cliente1
+  3 | 2020-09-25 22:14:25 | Cliente chevere
+  6 | 2020-09-25 22:14:25 | Cliente chevere
+  7 | 2020-08-02 16:22:00 | Compras varias
+  7 | 2020-08-02 22:56:09 | Compras varias
+  7 | 2020-08-02 21:30:00 | Compras varias
+  7 | 2020-08-02 17:25:50 | Compras varias
+  7 | 2020-08-02 12:37:00 | Compras varias
+(11 rows)
+
+

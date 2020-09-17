@@ -208,5 +208,53 @@ eva=# SELECT * FROM comentarios;
 ----+----------------+-----------+----------
 (0 rows)
 
+10. Crear 2 comentarios para el post de "Pamela" y 4 para "Carlos" (0.4 puntos)
+
+eva=# INSERT INTO comentarios(fecha_creacion, contenido, id_posts)
+VALUES('2020-12-31', 'clienta mejorada', '2');
+INSERT 0 1
+
+INSERT INTO comentarios(fecha_creacion, contenido, id_posts)
+VALUES('2020-12-31', 'clienta', '2');
+INSERT 0 1
+
+eva=# SELECT * FROM comentarios;
+ id |  fecha_creacion  |    contenido     | id_posts 
+----+---------------------+------------------+----------
+  1 | 2020-12-31 00:00:00 | clienta mejorada |        2
+  2 | 2020-12-31 00:00:00 | clienta          |        2
+(2 rows)
+
+eva=# INSERT INTO comentarios(fecha_creacion, contenido, id_posts)
+VALUES('2020-12-31', 'cliente serio', '3');
+INSERT 0 1
+
+eva=# INSERT INTO comentarios(fecha_creacion, contenido, id_posts)
+VALUES('2020-12-31', 'cliente', '6');
+INSERT 0 1
+
+eva=# INSERT INTO comentarios(fecha_creacion, contenido, id_posts)
+VALUES('2020-12-01', 'cliente', '6');
+INSERT 0 1
+
+eva=# INSERT INTO comentarios(fecha_creacion, contenido, id_posts) VALUES('2020-12-01', 'cliente', '6');
+INSERT 0 1
+
+
+eva=# SELECT * FROM comentarios;
+ id |  fecha_creacion  |    contenido     | id_posts 
+----+---------------------+------------------+----------
+  1 | 2020-12-31 00:00:00 | clienta mejorada |        2
+  2 | 2020-12-31 00:00:00 | clienta          |        2
+  3 | 2020-12-31 00:00:00 | cliente serio    |        3
+  4 | 2020-12-31 00:00:00 | cliente          |        6
+  5 | 2020-12-01 00:00:00 | cliente          |        6
+  6 | 2020-12-01 00:00:00 | cliente          |        6
+(6 rows)
+
+11. Crear un nuevo post para "Margarita" (1 punto)
+
+eva=# INSERT INTO posts(usuario, fecha_de_creacion, contenido, descripcion) VALUES('Margarita', '2020-09-24', 'Base de datos', 'Clienta nueva');
+INSERT 0 1
 
 
